@@ -130,7 +130,7 @@ nav {
     font-size: 12px;
 }
 
-.card .label.green {
+.card .labelgreen {
     background-color: #28a745; /* Green for DELL */
 }
 
@@ -283,4 +283,22 @@ body {
     .card .add-to-cart:hover {
         background-color: #e65c00;
     }
+   
+    .card img {
+        width: 100%;
+        height: 180px; /* Ajusta esta altura según tu necesidad */
+        object-fit: cover; /* Mantiene el aspecto y centra la imagen dentro del contenedor */
+    }
+    .cart-item img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover; /* Mantiene el aspecto y centra la imagen dentro del contenedor */
     
+}
+ 
+
+.card h5.cuotas { 
+    color:#007bff;
+    text-align: center;
+    
+    }
