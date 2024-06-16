@@ -1,3 +1,4 @@
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
@@ -10,10 +11,15 @@ body {
     color: #f5f5f5;
 }
 
+/* Encabezado */
 header {
     width: 100%;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    height: 40px;
 }
 
 nav {
@@ -22,10 +28,6 @@ nav {
     align-items: center;
     padding: 0 20px;
     height: 60px;
-}
-
-.logo img {
-    height: 40px;
 }
 
 .nav-links {
@@ -44,8 +46,13 @@ nav {
     font-size: 16px;
 }
 
+.dark-mode .nav-links a {
+    color: #f5f5f5;
+}
+
 .dark-mode-toggle {
-    padding-left: 20px;
+    padding-left: 1300px;
+
 }
 
 .cart-icon {
@@ -82,20 +89,6 @@ nav {
 #dark-mode-toggle:hover {
     background-color: #0056b3;
 }
-
-.burger {
-    display: none;
-    cursor: pointer;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.burger div {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-}
-
 .card-container {
     display: flex;
     gap: 20px;
@@ -109,21 +102,23 @@ nav {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 250px;
-    text-align: center;
+    width: 300px;
+     text-align: center;
     position: relative;
     margin: 20px;
 }
 
 .card img {
     width: 100%;
+    height: 250px; /* Ajusta esta altura según tu necesidad */
+    object-fit: cover; /* Mantiene el aspecto y centra la imagen dentro del contenedor */
 }
 
 .card .label {
     position: absolute;
     top: 10px;
     left: 10px;
-    background-color: #007bff; /* Blue for ASUS Rog */
+    background-color: #007bff; /* Azul para ASUS Rog */
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
@@ -131,7 +126,7 @@ nav {
 }
 
 .card .labelgreen {
-    background-color: #28a745; /* Green for DELL */
+    background-color: #28a745; /* Verde para DELL */
 }
 
 .card .price {
@@ -145,6 +140,7 @@ nav {
     padding: 0 20px;
     color: #333;
     margin-bottom: 20px;
+    font-size: 14px; /* Tamaño de fuente ajustado */
 }
 
 .card .link {
@@ -161,11 +157,18 @@ nav {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-   
+    width: 100%;
+    transition: background-color 0.3s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
-/* En tu archivo styles.css */
+.card button.add-to-cart:hover {
+    background-color: #e65c00;
+}
 
+/* Overlay del carrito */
 .cart-overlay {
     display: none;
     position: fixed;
@@ -219,24 +222,23 @@ nav {
     margin-left: auto;
     margin-right: auto;
 }
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-    transition: background-color 0.3s, color 0.3s;
+
+/* Estilos específicos para texto de cuotas */
+.card h5.cuotas {
+    color: #007bff;
+    text-align: center;
+    font-size: 14px;
 }
 
-.dark-mode {
-    background-color: #333;
-    color: #f5f5f5;
-}
-
-/* Estilos específicos para el modo oscuro */
+/* Estilos específicos para modo oscuro */
 .dark-mode header {
     background-color: #111;
     color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .nav-links a {
+    color: #f5f5f5;
 }
 
 .dark-mode .cart {
@@ -249,7 +251,7 @@ body {
 }
 
 .dark-mode .cart-item img {
-    filter: brightness(0.8); /* Ejemplo de ajuste de imagen para modo oscuro */
+    filter: brightness(0.8);
 }
 
 .dark-mode .card-container .card {
@@ -259,46 +261,9 @@ body {
 }
 
 .dark-mode .card .label {
-    background-color: #007bff; /* Ejemplo de ajuste de etiqueta para modo oscuro */
+    background-color: #007bff;
 }
 
-/* Otros estilos específicos para modo oscuro según tu diseño */
-.card .description {
-    font-size: 14px;
+.dark-mode .card .description {
     color: #666;
-    padding: 0 10px 20px;}
-    .card .add-to-cart {
-        background-color: #ff6600;
-        color: white;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-        width: 100%;
-        transition: background-color 0.3s;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-    }
-    
-    .card .add-to-cart:hover {
-        background-color: #e65c00;
-    }
-   
-    .card img {
-        width: 100%;
-        height: 180px; /* Ajusta esta altura según tu necesidad */
-        object-fit: cover; /* Mantiene el aspecto y centra la imagen dentro del contenedor */
-    }
-    .cart-item img {
-        width: 80px;
-        height: 80px;
-        object-fit: cover; /* Mantiene el aspecto y centra la imagen dentro del contenedor */
-    
 }
- 
-
-.card h5.cuotas { 
-    color:#007bff;
-    text-align: center;
-    
-    }
