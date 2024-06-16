@@ -1,0 +1,286 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+header {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.dark-mode-toggle {
+    padding-left: 20px;
+}
+
+.cart-icon {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.cart-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: #333;
+}
+
+#cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ff6600;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+#dark-mode-toggle {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #0056b3;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 250px;
+    text-align: center;
+    position: relative;
+    margin: 20px;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card .label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #007bff; /* Blue for ASUS Rog */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.card .label.green {
+    background-color: #28a745; /* Green for DELL */
+}
+
+.card .price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff6600;
+    margin: 10px 0;
+}
+
+.card .description {
+    padding: 0 20px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.card .link {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.card button.add-to-cart {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+   
+}
+
+/* En tu archivo styles.css */
+
+.cart-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.cart {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    overflow: auto;
+    max-height: 80%;
+}
+
+.cart h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart-item img {
+    max-width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.close-cart {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+/* Estilos específicos para el modo oscuro */
+.dark-mode header {
+    background-color: #111;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .cart {
+    background: #111;
+    color: #fff;
+}
+
+.dark-mode .cart-item {
+    border-bottom: 1px solid #666;
+}
+
+.dark-mode .cart-item img {
+    filter: brightness(0.8); /* Ejemplo de ajuste de imagen para modo oscuro */
+}
+
+.dark-mode .card-container .card {
+    background-color: #222;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .card .label {
+    background-color: #007bff; /* Ejemplo de ajuste de etiqueta para modo oscuro */
+}
+
+/* Otros estilos específicos para modo oscuro según tu diseño */
+.card .description {
+    font-size: 14px;
+    color: #666;
+    padding: 0 10px 20px;}
+    .card .add-to-cart {
+        background-color: #ff6600;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        width: 100%;
+        transition: background-color 0.3s;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    
+    .card .add-to-cart:hover {
+        background-color: #e65c00;
+    }
+    
